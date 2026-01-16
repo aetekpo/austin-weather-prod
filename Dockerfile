@@ -1,5 +1,6 @@
-FROM quay.io/astronomer/ap-airflow:2.10.5-base
+FROM apache/airflow:2.10.0-python3.12
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY dags /opt/airflow/dags
+
 
